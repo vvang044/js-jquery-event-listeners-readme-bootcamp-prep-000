@@ -12,7 +12,11 @@ function frameIt(){
 }
 
 function pressIt(){
-  
+  $('form').on('keydown', function(key){
+    if(key.which === G){
+      alter("You pressed G")
+    }
+  })
 }
 
 $(document).ready(function(){
@@ -20,5 +24,6 @@ $(document).ready(function(){
 // call functions here
 getIt();
 frameIt();
+pressIt();
 
 });
